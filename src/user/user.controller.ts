@@ -6,6 +6,12 @@ import { UserService } from './user.service';
 export class UserController {
     constructor (private UserService: UserService) {}
 
+
+    @Get("/")
+    getUsers() {
+        return this.UserService.getUsers;
+    }
+
     @Post("create")
     @HttpCode(200)
      createUser(
